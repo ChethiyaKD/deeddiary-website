@@ -2,8 +2,11 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 export default function Hero() {
+  const pathname = usePathname();
+
   return (
     <div className="relative overflow-hidden bg-white">
       {/* Subtle gradient background */}
@@ -86,15 +89,16 @@ export default function Hero() {
             className="relative"
           >
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-500 blur-2xl opacity-10 transform scale-95" />
-            <div className="relative">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white">
               <Image
-                src="/hero-image.png"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/hero-image.png`}
                 alt="DeedDiary Extension Screenshot"
                 width={800}
                 height={533}
                 className="w-full h-auto"
                 priority
               />
+              <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-black/10" />
             </div>
           </motion.div>
         </div>
