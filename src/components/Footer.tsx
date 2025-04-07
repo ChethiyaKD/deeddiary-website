@@ -1,22 +1,17 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaChrome, FaGithub, FaTwitter } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 import BackgroundPattern from './BackgroundPattern';
 
 const navigation = {
   main: [
-    { name: 'About', href: '#' },
+    { name: 'Home', href: '#' },
     { name: 'Features', href: '#features' },
     { name: 'Reviews', href: '#reviews' },
     { name: 'Contact', href: '#contact' },
   ],
   social: [
-    {
-      name: 'Chrome Web Store',
-      href: 'https://chromewebstore.google.com/detail/deeddiary-%E2%80%93-good-deeds-jo/defbebpcmhejgjjoedokohipfljpaidb',
-      icon: FaChrome,
-    },
     {
       name: 'GitHub',
       href: 'https://github.com/ChethiyaKD',
