@@ -2,11 +2,8 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
 
 export default function Hero() {
-  const pathname = usePathname();
-
   return (
     <div className="relative overflow-hidden bg-white">
       {/* Subtle gradient background */}
