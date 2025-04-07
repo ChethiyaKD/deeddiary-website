@@ -86,7 +86,7 @@ export default function Hero() {
             className="relative"
           >
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-500 blur-2xl opacity-10 transform scale-95" />
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white">
+            <div className="relative ">
               <Image
                 src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/hero-image.png`}
                 alt="DeedDiary Extension Screenshot"
@@ -95,7 +95,6 @@ export default function Hero() {
                 className="w-full h-auto"
                 priority
               />
-              <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-black/10" />
             </div>
           </motion.div>
         </div>
