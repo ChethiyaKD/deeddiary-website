@@ -1,15 +1,8 @@
 'use client';
 
-import { useState } from 'react';
 import { EnvelopeIcon } from '@heroicons/react/24/outline';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
   return (
     <div className="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
       <div className="mx-auto max-w-xl lg:max-w-4xl">
@@ -35,10 +28,10 @@ export default function Contact() {
             </div>
           </div>
           <div className="lg:flex-auto">
-            <form className="mt-4 sm:mt-0">
+            <form action="https://formspree.io/f/hello@deeddiary.com" method="POST" className="mt-4 sm:mt-0">
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div>
-                  <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
+                  <label htmlFor="name" className="block text-sm font-semibold leading-6 text-gray-900">
                     Name
                   </label>
                   <div className="mt-2.5">
@@ -47,6 +40,7 @@ export default function Contact() {
                       name="name"
                       id="name"
                       autoComplete="given-name"
+                      required
                       className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
@@ -61,6 +55,7 @@ export default function Contact() {
                       name="email"
                       id="email"
                       autoComplete="email"
+                      required
                       className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
@@ -74,6 +69,7 @@ export default function Contact() {
                       name="message"
                       id="message"
                       rows={4}
+                      required
                       className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
